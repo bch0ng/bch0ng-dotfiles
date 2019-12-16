@@ -2,12 +2,9 @@
 call plug#begin()
 
     " Language specific Vim plugins
-    " Golang
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-    Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
-    " Cassandra CQL
-    Plug 'elubow/cql-vim'
-
+    " PHP
+    Plug 'stanangeloff/php.vim'
+    
     " General Vim plugins
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-surround'
@@ -15,23 +12,16 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'mattn/emmet-vim'
-    Plug 'yggdroot/indentline'
-    Plug 'junegunn/vim-easy-align'
+    "Plug 'yggdroot/indentline'
+    "Plug 'junegunn/vim-easy-align'
 
     " Themes
     Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
-" Vim Golang beautifications
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-
 " Theme
 set t_Co=256
-let g:nord_bold_vertical_split_line = 1
 colorscheme nord
 
 " Vim Airline theme
@@ -43,7 +33,6 @@ let g:airline_powerline_fonts=1
 syntax on
 filetype plugin indent on
 set bs=2
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 set number
 set noshowmode
 set laststatus=2
@@ -61,12 +50,6 @@ else
 endif
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
-
-" Vim Golang stuff
-set autowrite
-let g:go_fmt_command = "goimports"
-let g:go_auto_type_info = 1
-set updatetime=100
 
 " Vim YAML stuff
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
