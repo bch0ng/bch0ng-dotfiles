@@ -1,3 +1,4 @@
+#!/bin/bash
 # Brew checkup
 brew update
 brew upgrade
