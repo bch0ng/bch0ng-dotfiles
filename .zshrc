@@ -120,6 +120,10 @@ alias grbs="git reabse --skip"
 alias gcpc="git cherry-pick --continue"
 alias gcpa="git cherry-pick --abort"
 alias gcps="git cherry-pick --skip"
+alias gclean='git commit -am "clean"'
+alias gfix='git commit -am "fix"'
+alias gup='git commit -am "update"'
+alias ga.="git add ."
 
 # Navigation
 alias ls="ls -la"
