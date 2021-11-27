@@ -16,19 +16,6 @@ brew install yarn
 # Containerization
 brew install docker
 
-# Languages
-brew install go
-brew install python
-brew install sass
-brew install kotlin
-
-# Databases
-brew install mongodb
-brew install mysql
-brew install postgresql
-brew install redis
-brew install sqlite
-
 # Etc.
 brew install openssl
 

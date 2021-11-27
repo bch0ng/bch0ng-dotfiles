@@ -103,6 +103,23 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-# Go Directory
-export GOPATH="$HOME/go"
+
+# Git aliases
+alias gl="git log"
+alias grl="git reflog"
+alias gs="git status"
+alias gd="git diff"
+alias gsh="git show"
+alias gp="git push"
+alias gpf="git push --force-with-lease"
+alias gpl="git pull"
+alias gf=" git fetch origin/master"
+alias grbc="git rebase --continue"
+alias grba="git rebase --abort"
+alias grbs="git reabse --skip"
+alias gcpc="git cherry-pick --continue"
+alias gcpa="git cherry-pick --abort"
+alias gcps="git cherry-pick --skip"
+
+# Navigation
+alias ls="ls -la"
