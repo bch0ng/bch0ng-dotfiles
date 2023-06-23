@@ -124,6 +124,22 @@ alias gclean='git commit -am "clean"'
 alias gfix='git commit -am "fix"'
 alias gup='git commit -am "update"'
 alias ga.="git add ."
+alias gc--.="git checkout -- ."
+alias gc-="git checkout -"
+function gnb() {
+    git checkout -b $1 && git commit --allow-empty -m "start of branch $(git rev-parse --abbrev-ref HEAD)"
+}
+function gpo() {
+    git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+}
+
+# Docker
+alias dsra="docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
+alias dpsa="docker ps -a"
 
 # Navigation
 alias ls="ls -la"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
